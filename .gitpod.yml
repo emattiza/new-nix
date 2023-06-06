@@ -86,16 +86,9 @@ tasks:
   - init: >
       mkdir -p /home/gitpod/.config/nix &&
       echo 'sandbox = false' >> /home/gitpod/.config/nix/nix.conf
-  - name: nix
+    name: nix
     command: |
       direnv allow
-  - name: tailscaled
-    command: |
-      sudo tailscaled
-  # - name: tailscale
-  #   command: |
-  #     sudo -E tailscale up --hostname "gitpod-${GITPOD_WORKSPACE_ID}" \
-  #                          --authkey "${TAILSCALE_AUTHKEY}"
 
 ## The 'ports' section defines various ports your may listen on are
 ## configured in Gitpod on an authenticated URL. By default, all ports
